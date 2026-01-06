@@ -22,10 +22,17 @@ always #5 pclk = ~pclk;
 initial begin
   @(posedge pclk) psel = 1'b1;
 		  penable = 1'b0;
-                  paddr = $random();
+                  paddr = 20;
                   pwrite = 1'b1;
-                  pwdata = $random();
+                  pwdata = 100;
  #15         // @(posedge clk) is not working so matched the posedge with the dealy 
+ penable = 1'b1;
+
+  #25  psel = 1'b1;
+		  penable = 1'b0;
+                  paddr = 20;
+                  pwrite = 1'b0;
+ #35         // @(posedge clk) is not working so matched the posedge with the dealy 
  penable = 1'b1;
 
 end 
