@@ -18,9 +18,7 @@ capturing the data from master or giving data to master
 master chnaging the signals according to next transactions 
 so to avoid the race conditions we use internal buffers 
 
-
-
-// still we have buffers to get reliable data 
-// could cause issues if paddr,pwdata,pwrite changes immediately in access
-// state so, // we add buffers for all those signals in setup state
+still we have buffers to get reliable data 
+could cause issues if paddr,pwdata,pwrite changes immediately in access
+state so,we add buffers for all those signals in setup state
 
